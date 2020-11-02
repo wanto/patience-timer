@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+}
+
+/* justify elements */
+.game-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+.player-container, .middle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.config-container * {
+    width: 5rem;
+    text-align: center;
+}
+
+
+
+/* rotate top player */
+#player1-player-container * {
+    transform: rotate(180deg);
+}
+
+
+
+.nextmove-button, .player-timer, .endturn-button 
+{
+    /* transform: rotate(90deg); */
+}
