@@ -1,9 +1,13 @@
 html, body {
     height: 100%;
+    /* overflow: hidden; */
+    margin: 0px;
+    padding: 0px;
 }
 
 /* justify elements */
 .game-container {
+    position: fixed;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -14,12 +18,22 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-.config-container * {
-    width: 5rem;
-    text-align: center;
+    height: 30%;
 }
 
+.nextmove-button, .player-timer, .endturn-button, .pause-button, .reset-button, .config-container {
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+}
+.config-container, .player-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.player-timer *,.config-container * {
+    margin: 1.2rem;
+}
 
 
 /* rotate top player */
@@ -27,9 +41,35 @@ html, body {
     transform: rotate(180deg);
 }
 
+/* style text */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
+button, .player-timer *, .config-container * {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
 
-.nextmove-button, .player-timer, .endturn-button 
-{
-    /* transform: rotate(90deg); */
+button {
+    font-size: 2rem;
+}
+
+.player-timer * {
+    font-size: 4rem;
+}
+
+.config-container * {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* color buttons */
+
+.endturn-button {
+    background-color: tomato;
+}
+.nextmove-button {
+    background-color: lightgreen;
+}
+.disabled-button {
+    background-color: grey;
 }
