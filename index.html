@@ -2,16 +2,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="./main.css"/>
+        <script src="main.js"></script>
     </head>
     <body>
         <div class="game-container">
             <div class="player-container" id="player1-player-container">
-                <button class="nextmove-button disabled-button" id="player1-nextmove-button" disabled="true">next move</button>
+                <button class="nextmove-button disabled-button" id="player1-nextmove-button" disabled="true" onclick="game.nextmove_handler_player1()">next move</button>
                 <div class="player-timer" id="player1-player-timer">
                     <div class="main-player-timer">00:00</div>
                     <div class="bonus-player-timer">0</div>
                 </div>
-                <button class="endturn-button disabled-button" id="player1-endturn-button" disabled=true>end turn</button>
+                <button class="endturn-button disabled-button" id="player1-endturn-button" disabled=true onclick="game.set_turn_player2()">end turn</button>
             </div>
             <div class="middle-container">
                 <button class="pause-button" id="pause-button">pause</button>
@@ -19,15 +20,15 @@
                     <label>time/bonus</label><br/>
                     <input type="text" class="config-input" id="playtime-input" value="10/10"/>
                 </div>
-                <button class="reset-button" id="reset-button">new game</button>
+                <button class="reset-button" id="reset-button" onclick="game.start_game()">new game</button>
             </div>
             <div class="player-container" id="player2-player-container">
-                <button class="nextmove-button disabled-button" id="player2-nextmove-button" disabled="true">next move</button>
+                <button class="nextmove-button disabled-button" id="player2-nextmove-button" disabled="true" onclick="game.nextmove_handler_player2()">next move</button>
                 <div class="player-timer" id="player2-player-timer">
                     <div class="main-player-timer">00:00</div>
                     <div class="bonus-player-timer">0</div>
                 </div>
-                <button class="endturn-button disabled-button" id="player2-endturn-button" disabled=true>end turn</button>
+                <button class="endturn-button disabled-button" id="player2-endturn-button" disabled=true onclick="game.set_turn_player1()">end turn</button>
             </div>
         </div>
     </body>

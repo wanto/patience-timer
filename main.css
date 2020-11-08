@@ -37,7 +37,7 @@ html, body {
 
 
 /* rotate top player */
-#player1-player-container * {
+#player1-player-container button, #player1-player-container .player-timer {
     transform: rotate(180deg);
 }
 
